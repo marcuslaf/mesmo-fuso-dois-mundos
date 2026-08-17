@@ -1,12 +1,21 @@
 "use client";
 
 import { DialogueSheet } from "@/components/game/DialogueSheet";
+import { PixelSprite } from "@/components/game/PixelSprite";
+import { AMBIENT } from "@/data/art/scenarios";
 import type { SceneFrameProps } from "@/components/game/SceneRenderer";
 
 /** Layout "single": fundo neutro/ambiental para narração simples. */
 export function SingleScreen(props: SceneFrameProps) {
   return (
-    <div className="absolute inset-0 bg-gradient-to-b from-zinc-800 via-zinc-950 to-black">
+    <div className="absolute inset-0 overflow-hidden bg-gradient-to-b from-zinc-800 via-zinc-950 to-black">
+      {/* Noite estrelada com silhueta de cidade */}
+      <PixelSprite
+        art={AMBIENT.art}
+        palette={AMBIENT.palette}
+        cover
+        className="absolute inset-0 opacity-70"
+      />
       {/* Vinheta sutil */}
       <div
         aria-hidden="true"

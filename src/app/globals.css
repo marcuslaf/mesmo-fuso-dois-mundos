@@ -142,3 +142,23 @@
 .animate-scene-in {
   animation: scene-fade-in 320ms ease-out both;
 }
+
+/* Retrato "pula" quando o speaker muda */
+@keyframes pixel-bounce {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-4px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-pixel-bounce {
+  animation: pixel-bounce 240ms ease-out;
+}

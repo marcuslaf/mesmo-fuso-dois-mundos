@@ -3,9 +3,12 @@
 import { useEffect, useRef } from "react";
 import { Crown, Landmark, Shield } from "lucide-react";
 
+import { PixelSprite } from "@/components/game/PixelSprite";
+import { SpeakerPortrait } from "@/components/game/SpeakerPortrait";
 import { TypeCursor } from "@/components/game/DialogueSheet";
 import { KC_NICKNAMES, SPEAKER_STYLES } from "@/components/game/speakers";
 import { Button } from "@/components/ui/button";
+import { KC_MAP } from "@/data/art/scenarios";
 import type { SceneFrameProps } from "@/components/game/SceneRenderer";
 import type { Speaker } from "@/lib/game/types";
 
@@ -33,9 +36,21 @@ export function KCScreen({
   }, [lineIndex, charCount]);
 
   return (
-    <div className="absolute inset-0 flex flex-col bg-gradient-to-br from-purple-950 via-purple-900 to-amber-950">
+    <div className="absolute inset-0 flex flex-col overflow-hidden bg-gradient-to-br from-purple-950 via-purple-900 to-amber-950">
+      {/* Mapa do reino ao fundo, escurecido para legibilidade */}
+      <PixelSprite
+        art={KC_MAP.art}
+        palette={KC_MAP.palette}
+        cover
+        className="absolute inset-0 opacity-40"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-gradient-to-b from-purple-950/80 via-purple-950/60 to-purple-950/90"
+      />
+
       {/* Barra da aliança */}
-      <header className="flex items-center justify-center gap-2 border-b border-amber-400/20 bg-purple-950/80 px-4 py-2.5">
+      <header className="relative flex items-center justify-center gap-2 border-b border-amber-400/20 bg-purple-950/80 px-4 py-2.5 backdrop-blur-sm">
         <Crown className="size-4 text-amber-300" />
         <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-200">
           Coroa da Meia-Noite
@@ -43,9 +58,15 @@ export function KCScreen({
       </header>
 
       {/* Mapa do reino */}
-      <div className="px-4 pt-3">
-        <div className="rounded-xl border border-amber-400/25 bg-purple-900/40 p-3 backdrop-blur-sm">
-          <div className="flex items-center justify-between gap-2">
+      <div className="relative px-4 pt-3">
+        <div className="overflow-hidden rounded-xl border border-amber-400/25 bg-purple-900/40 backdrop-blur-sm">
+          <PixelSprite
+            art={KC_MAP.art}
+            palette={KC_MAP.palette}
+            cover
+            className="absolute inset-0 opacity-25"
+          />
+          <div className="relative flex items-center justify-between gap-2 p-3">
             <div className="flex items-center gap-2 text-amber-200/90">
               <Landmark className="size-4" />
               <Shield className="size-4" />
@@ -64,7 +85,7 @@ export function KCScreen({
       <div
         ref={scrollRef}
         onClick={showControls ? undefined : onAdvance}
-        className="flex-1 cursor-pointer overflow-y-auto px-4 py-4"
+        className="relative flex-1 cursor-pointer overflow-y-auto px-4 py-4"
       >
         <div className="flex flex-col gap-3">
           {lines.slice(0, lineIndex + 1).map((line, i) => {
@@ -104,18 +125,27 @@ export function KCScreen({
             return (
               <div
                 key={i}
-                className={`flex flex-col ${isValeria ? "items-end" : "items-start"}`}
+                className={`flex gap-2 ${isValeria ? "flex-row-reverse" : ""}`}
               >
-                <span className={`mb-0.5 px-1 text-[10px] font-semibold ${style.nameClass}`}>
-                  {nick}
-                </span>
+                <SpeakerPortrait
+                  speaker={line.speaker}
+                  size={40}
+                  className="mt-0.5 shrink-0"
+                />
                 <div
-                  className={`max-w-[85%] rounded-2xl border px-3 py-2 text-sm leading-relaxed text-zinc-100 ${style.bubbleClass} ${
-                    isValeria ? "rounded-br-sm" : "rounded-bl-sm"
-                  }`}
+                  className={`flex flex-col ${isValeria ? "items-end" : "items-start"}`}
                 >
-                  {typed}
-                  {cursor}
+                  <span className={`mb-0.5 px-1 text-[10px] font-semibold ${style.nameClass}`}>
+                    {nick}
+                  </span>
+                  <div
+                    className={`max-w-[85%] rounded-2xl border px-3 py-2 text-sm leading-relaxed text-zinc-100 ${style.bubbleClass} ${
+                      isValeria ? "rounded-br-sm" : "rounded-bl-sm"
+                    }`}
+                  >
+                    {typed}
+                    {cursor}
+                  </div>
                 </div>
               </div>
             );

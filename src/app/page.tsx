@@ -3,8 +3,10 @@
 import { useState } from "react";
 import { Moon, Play, RotateCcw, Sun } from "lucide-react";
 
+import { PixelSprite } from "@/components/game/PixelSprite";
 import { SceneRenderer } from "@/components/game/SceneRenderer";
 import { Button } from "@/components/ui/button";
+import { COVER } from "@/data/art/cover";
 import { getScene } from "@/data/scenes";
 import { useGame } from "@/lib/game/store";
 
@@ -72,14 +74,26 @@ function TitleScreen({
   onContinue: () => void;
 }) {
   return (
-    <main className="flex min-h-dvh flex-col items-center justify-center gap-10 bg-gradient-to-b from-zinc-950 via-zinc-900 to-orange-950/70 px-6 text-center text-zinc-50">
-      <div className="flex flex-col items-center gap-5">
+    <main className="relative flex min-h-dvh flex-col items-center justify-center gap-10 overflow-hidden bg-zinc-950 px-6 text-center text-zinc-50">
+      {/* Capa pixel art: Fortaleza × Buenos Aires */}
+      <PixelSprite
+        art={COVER.art}
+        palette={COVER.palette}
+        cover
+        className="absolute inset-0 opacity-60"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-gradient-to-b from-zinc-950/80 via-zinc-950/40 to-zinc-950/90"
+      />
+
+      <div className="relative z-10 flex flex-col items-center gap-5">
         <div className="flex items-center gap-3 text-amber-300/80">
           <Sun className="size-6" />
           <Moon className="size-6" />
         </div>
         <div>
-          <h1 className="text-3xl font-bold leading-tight tracking-tight">
+          <h1 className="text-3xl font-bold leading-tight tracking-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
             Mesmo Fuso,
             <br />
             Dois Mundos
@@ -88,7 +102,7 @@ function TitleScreen({
         </div>
       </div>
 
-      <div className="flex w-full max-w-xs flex-col gap-3">
+      <div className="relative z-10 flex w-full max-w-xs flex-col gap-3">
         <Button size="lg" className="w-full" onClick={onStart}>
           <Play />
           Começar
@@ -100,7 +114,7 @@ function TitleScreen({
         ) : null}
       </div>
 
-      <p className="max-w-xs text-xs leading-relaxed text-zinc-500">
+      <p className="relative z-10 max-w-xs text-xs leading-relaxed text-zinc-500">
         Marcus, em Fortaleza. Valeria, em Buenos Aires. Mesmo fuso. Dois mundos.
         Um trono.
       </p>

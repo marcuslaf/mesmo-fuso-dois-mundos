@@ -3,6 +3,7 @@
 import { ChevronRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { SpeakerPortrait } from "@/components/game/SpeakerPortrait";
 import { SPEAKER_STYLES } from "@/components/game/speakers";
 import type { SceneFrameProps } from "@/components/game/SceneRenderer";
 
@@ -73,6 +74,12 @@ export function DialogueSheet({
         <span
           className={`mb-1 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider ${style.nameClass}`}
         >
+          <SpeakerPortrait
+            key={line.speaker}
+            speaker={line.speaker}
+            size={44}
+            className="animate-pixel-bounce shrink-0"
+          />
           {style.label}
         </span>
         <p className="text-[15px] leading-relaxed text-zinc-100">

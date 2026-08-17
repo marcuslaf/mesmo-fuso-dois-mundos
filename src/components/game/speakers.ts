@@ -1,3 +1,5 @@
+import type { PixelArt } from "@/components/game/PixelSprite";
+import { FRAN, GALEGO, MARCUS, VALERIA } from "@/data/art/portraits";
 import type { Speaker } from "@/lib/game/types";
 
 export interface SpeakerStyle {
@@ -48,4 +50,15 @@ export const SPEAKER_STYLES: Record<Speaker, SpeakerStyle> = {
 export const KC_NICKNAMES: Partial<Record<Speaker, string>> = {
   marcus: "Rei_Marcus",
   valeria: "Rainha_Valeria",
+};
+
+/**
+ * Retrato pixel art por speaker. narrador e sistema não têm retrato
+ * (usam ícones: livro e coroa).
+ */
+export const SPEAKER_PORTRAITS: Partial<Record<Speaker, PixelArt>> = {
+  marcus: MARCUS,
+  valeria: VALERIA,
+  fran: FRAN,
+  galego: GALEGO,
 };
