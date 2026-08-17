@@ -8,9 +8,9 @@ import type { PixelArt } from "@/components/game/PixelSprite";
 export const MARCUS: PixelArt = {
   art: [
     "................",
-    "....hhhhhhhh....",
-    "...hhhhhhhhhh...",
-    "...hHhhhhhhHh...",
+    "....hhhhhHhH....",
+    "...HhHHhhHHhH...",
+    "...HHhhhHHhHh...",
     "...hhSSSSSShh...",
     "...hSSSSSSSSh...",
     "...hSgGGGgSSh...",
@@ -25,8 +25,8 @@ export const MARCUS: PixelArt = {
     "..ccccccccccc...",
   ],
   palette: {
-    h: "#AEB4BE", // cabelo curto grisalho (prata)
-    H: "#7A818C", // cabelo sombra (cinza médio)
+    h: "#1A1D24", // cabelo preto
+    H: "#AEB4BE", // mechas brancas (grisalhas)
     S: "#E0AC69", // pele
     s: "#C98F52", // pele sombra
     g: "#3F4A5A", // moldura dos óculos
