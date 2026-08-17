@@ -8,25 +8,25 @@ import type { PixelArt } from "@/components/game/PixelSprite";
 export const MARCUS: PixelArt = {
   art: [
     "................",
-    ".....hhhhhh.....",
     "....hhhhhhhh....",
-    "...hhHHhhHHhh...",
+    "...hhhhhhhhhh...",
+    "...hHhhhhhhHh...",
     "...hhSSSSSShh...",
     "...hSSSSSSSSh...",
     "...hSgGGGgSSh...",
     "..hSSgGGGgSSS...",
-    "..hSSSSSSSSS....",
-    "..hSSsSSSsSS....",
-    "..hSSssssSSS....",
-    "..hSSbbbSbbbS...",
-    "..hSSbbbbbbbS...",
-    "..hSSbbbbbbbS...",
+    "..SSSSSSSSSS....",
+    "..SSsSSSsSSS....",
+    "..SSsssssSSS....",
+    "..SSbbbSbbbS....",
+    "..SSbbbbbbbS....",
+    "..SSbbbbbbbS....",
     "...ccccccccc....",
     "..ccccccccccc...",
   ],
   palette: {
-    h: "#8A8F98", // cabelo grisalho
-    H: "#5B6470", // cabelo escuro (têmporas)
+    h: "#AEB4BE", // cabelo curto grisalho (prata)
+    H: "#7A818C", // cabelo sombra (cinza médio)
     S: "#E0AC69", // pele
     s: "#C98F52", // pele sombra
     g: "#3F4A5A", // moldura dos óculos
@@ -40,26 +40,27 @@ export const VALERIA: PixelArt = {
   art: [
     "................",
     "....HHHHHHHH....",
-    "...HHHHHHHHHH...",
-    "...HHHHHHHHHH...",
+    "...HhHHHHHHhH...",
+    "...HhHHHHHHhH...",
     "...HHSSSSSSHH...",
     "..HHHSSSSSSHHH..",
     "..HHSEESSEESHH..",
     "..HHSSSSSSSSHH..",
-    "...SSSSSSSSSS...",
-    "..DSSsSSSSsSSD..",
-    "..DSSSSSSSSSSD..",
-    "..SSSRRRRSSSS...",
-    "...SSSRRRSSS....",
-    "...LLLLLLLLL....",
-    "..LLLLLLLLLLLL..",
-    "..LLLLLLLLLLLL..",
+    ".HHHSSSSSSSSHHH.",
+    ".HHDSSsSSsSSDHH.",
+    ".HHSSSSSSSSSSHH.",
+    ".HHSSSRRRRSSSHH.",
+    ".HHSSSSSSSSSSHH.",
+    "hHHHLLLLLLLLHHHh",
+    "hHHHLLLLLLLLHHHh",
+    "hhhhLLLLLLLLhhhh",
   ],
   palette: {
-    H: "#2A2E38", // cabelo preto
+    H: "#1A1D24", // cabelo preto puro
+    h: "#2E3440", // cabelo sombra (preto azulado)
     S: "#E8B98A", // pele
     s: "#C9945F", // pele sombra
-    E: "#2A2E38", // olhos
+    E: "#1A1D24", // olhos
     D: "#F5C542", // brinco dourado
     R: "#B0555A", // lábios
     L: "#3B82F6", // blusa azul
