@@ -15,7 +15,7 @@ export const cena11: Scene = {
     },
     {
       speaker: "narrador",
-      text: "Buenos Aires, 23h47. Mesmo fuso. Valeria, dona de uma loja de instrumentos em San Telmo, é a rainha da \"Coroa da Meia-Noite\" — o reino mais forte do servidor.",
+      text: "Buenos Aires, 23h47. Mesmo fuso. Valeria, empresária em Buenos Aires, é a rainha da \"Coroa da Meia-Noite\" — o reino mais forte do servidor.",
     },
     {
       speaker: "valeria",

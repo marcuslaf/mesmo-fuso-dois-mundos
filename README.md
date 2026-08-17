@@ -1,9 +1,9 @@
 # Mesmo Fuso, Dois Mundos
 # Same Timezone, Two Worlds
 
-**Conto interativo (visual novel mobile-first) sobre Marcus — dev junior de 47 anos em Fortaleza-CE — e Valeria, dona de uma loja de instrumentos em Buenos Aires. Separados por 5.300 km e unidos pelo mesmo fuso horário (UTC-3), eles se conhecem como co-regentes da aliança "Coroa da Meia-Noite" dentro do jogo mobile de reinos chamado KC.**
+**Conto interativo (visual novel mobile-first) sobre Marcus — dev junior de 47 anos em Fortaleza-CE — e Valeria, empresária em Buenos Aires. Separados por 5.300 km e unidos pelo mesmo fuso horário (UTC-3), eles se conhecem como co-regentes da aliança "Coroa da Meia-Noite" dentro do jogo mobile de reinos chamado KC.**
 
-**Interactive story (mobile-first visual novel) about Marcus — a 47-year-old junior dev in Fortaleza, Brazil — and Valeria, a music store owner in Buenos Aires. 5,300 km apart and united by the same timezone (UTC-3), they meet as co-rulers of the "Midnight Crown" alliance inside a kingdom mobile game called KC.**
+**Interactive story (mobile-first visual novel) about Marcus — a 47-year-old junior dev in Fortaleza, Brazil — and Valeria, a businesswoman in Buenos Aires. 5,300 km apart and united by the same timezone (UTC-3), they meet as co-rulers of the "Midnight Crown" alliance inside a kingdom mobile game called KC.**
 
 > O mesmo horário. Dois mundos. Um trono.
 > Same time. Two worlds. One throne.
