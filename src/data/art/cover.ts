@@ -1,20 +1,20 @@
 import type { PixelArt } from "@/components/game/PixelSprite";
 
 /**
- * Capa 48×30: metade esquerda = Fortaleza (quente), metade direita =
- * Buenos Aires (fria). A divisória vertical "derrete" no meio.
+ * Capa 48×30 estilo SNES 16-bit: metade esquerda = Fortaleza (quente),
+ * metade direita = Buenos Aires (fria). A divisória vertical "derrete" no meio.
  * Cada linha deve ter exatamente 48 caracteres (24 + 24).
  */
 export const COVER: PixelArt = {
   art: [
-    "AAAAAAcAAAAAAAAAAAAAAAAA" + "NNNNNNNNNNNNNNNNNNNNNNNN",
-    "AAAAAAcAAAAAAAAAAAAAAAAA" + "NNNNNNNNNNNNNNNNNNNNNNNN",
-    "AAAAAAAAAAAAAAAAAAAAAAAA" + "NNNNNNNNNNNNNNNNNNNNNNNN",
-    "SSSAAAAAAAAAAAAAAAAAAAAA" + "NNNNNNNNNNNNNNNNNNNNNNNN",
-    "SSSAAAAkAkkAAAAAAAAAAAAA" + "NNNNNNNNNNNNNNNNNNNNNNNN",
-    "SSSAAAAAAkAAAAAAAAAAAAAA" + "NNNNNNNNNNNNNNNNNNNNNNNN",
-    "BBBBBBBBBBBBBBBBBBBBllLL" + "NNNNNNNNNNNNNNNNNNNNNNNN",
-    "BBBBBBBBBBBBBBBBBBBBllLl" + "NRNRNRNRNRNRNRNRNRNRNRNR",
+    "AAAAAAcNAAAAAAAAAAAAAAAA" + "FFFFFFFFFFFFFFFFFFFFFFFF",
+    "AAAAAAcNAAAAAAAAAAAAAAAA" + "FFFFFFFFFFFFFFFFFFFFFFFF",
+    "AAAAAAAAAAAAAAAAAAAAAAAA" + "FFFFFFFFFFFFFFFFFFFFFFFF",
+    "SSSAAAAAAAAAAAAAAAAAAAAA" + "FFFFFFFFFFFFFFFFFFFFFFFF",
+    "SSSAAAAkAkkAAAAAAAAAAAAA" + "FFFFFFFFFFFFFFFFFFFFFFFF",
+    "SSSAAAAAAkAAAAAAAAAAAAAA" + "FFFFFFFFFFFFFFFFFFFFFFFF",
+    "BBBBBBBBBBBBBBBBBBBBllLL" + "FFFFFFFFFFFFFFFFFFFFFFFF",
+    "BBBBBBBBBBBBBBBBBBBBllLl" + "FRFRFRFRFRFRFRFRFRFRFRFR",
     "CCCCCCCCCCCCCCCCCCCCPPCC" + "URURURURURURURURURURURUR",
     "CCCCCCCCCCCCCCCCCCCCPPCC" + "UUUUUUUUUUUUUUUUUUUUUUUU",
     "MMMMSSSSSSSSSSSSSSSSPPMM" + "WWUYUYUYUYUYUYUYUYUYUYUY",
@@ -44,6 +44,7 @@ export const COVER: PixelArt = {
     C: "#F78A3C", // céu quente baixo
     S: "#FFF6D6", // sol e reflexo
     c: "#FFF0C0", // nuvens
+    N: "#E8C890", // nuvens sombra
     k: "#5A3A1E", // pássaros
     M: "#8FE0E8", // mar claro
     m: "#3AA0B8", // mar médio
@@ -54,7 +55,7 @@ export const COVER: PixelArt = {
     P: "#7A4E2A", // tronco da palmeira
     L: "#5AA844", // folha clara
     l: "#336B28", // folha escura
-    N: "#1E293B", // céu frio
+    F: "#1E293B", // céu frio
     U: "#3B4A63", // prédios
     Y: "#FDE68A", // janelas acesas
     R: "#F87171", // chuva

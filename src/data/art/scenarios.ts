@@ -1,8 +1,10 @@
 import type { PixelArt } from "@/components/game/PixelSprite";
 
 /**
- * Cenários 48×30 para fundos de cena.
- * Cada linha deve ter exatamente 48 caracteres; ' ' e '.' são transparentes.
+ * Cenários 48×30 estilo SNES 16-bit (referência: Zelda: A Link to the Past).
+ * Gradientes de céu, nuvens com sombra, camadas de profundidade, água com
+ * brilho e texturas no chão. Cada linha deve ter exatamente 48 caracteres;
+ * ' ' e '.' são transparentes.
  */
 
 /** Praia de Fortaleza ao entardecer: sol, nuvens, pássaros, mar, palmeira e areia. */
@@ -10,7 +12,7 @@ export const FORTALEZA: PixelArt = {
   art: [
     "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
     "AAAAAAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    "AAAAAAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "AAAAAAcNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
     "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
     "SSSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
     "SSSAAAAkAkkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -47,6 +49,7 @@ export const FORTALEZA: PixelArt = {
     E: "#E86A2E", // céu baixo (horizonte)
     S: "#FFF6D6", // sol e reflexo
     c: "#FFF0C0", // nuvens
+    N: "#E8C890", // nuvens sombra
     k: "#5A3A1E", // pássaros
     M: "#8FE0E8", // mar claro
     m: "#3AA0B8", // mar médio
