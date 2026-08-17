@@ -20,7 +20,9 @@ export function SpeakerPortrait({
   className?: string;
 }) {
   const art = SPEAKER_PORTRAITS[speaker];
-  const scale = Math.max(2, Math.round(size / 16));
+  // Escala baseada na largura real da arte (16×16, 24×24, ...).
+  const cols = art?.art[0]?.length ?? 16;
+  const scale = Math.max(2, Math.round(size / cols));
 
   if (art) {
     return (

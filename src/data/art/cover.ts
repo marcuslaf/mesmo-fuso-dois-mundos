@@ -1,36 +1,42 @@
 import type { PixelArt } from "@/components/game/PixelSprite";
 
 /**
- * Capa 40×24: metade esquerda = Fortaleza (quente), metade direita =
+ * Capa 48×30: metade esquerda = Fortaleza (quente), metade direita =
  * Buenos Aires (fria). A divisória vertical "derrete" no meio.
- * Cada linha deve ter exatamente 40 caracteres.
+ * Cada linha deve ter exatamente 48 caracteres.
  */
 export const COVER: PixelArt = {
   art: [
-    "AAAAAAAAAAAAAAAAAAAANNNNNNNNNNNNNNNNNNNN",
-    "AAAAAAAAAAAAAAAAAAAANNNNNNNNNNNNNNNNNNNN",
-    "AAAAAAAAAAAAAAAAAAAANNNNNNNNNNNNNNNNNNNN",
-    "SSSAAAAAAAAAAAAAAAAANNNNNNNNNNNNNNNNNNNN",
-    "SSSAAAAAAAAAAAAAAAAANNNNNNNNNNNNNNNNNNNN",
-    "SSSAAAAAAAAAAAAAAAAANNNNNNNNNNNNNNNNNNNN",
-    "BBBBBBBBBBBBBBllLLLllBBBNNNNNNNNNNNNNNNN",
-    "BBBBBBBBBBBBBBllLLLLlBBBNRNRNRNRNRNRNRNR",
-    "CCCCCCCCCCCCCCCCPPCCCCURURURURURURURURUR",
-    "CCCCCCCCCCCCCCCCPPCCCCUUUUUUUUUUUUUUUUUU",
-    "MMMMSSSSSSSSSSSSSSPPMMWWUYUYUYUYUYUYUYUY",
-    "MMMMSSSSSSSSSSSSSSPPMMWWUYUYUYUYUYUYUYUY",
-    "MWMWMWMWMWMWMWMWPPMMUYUYUYUYUYUYUYUYUYUY",
-    "mmmmmmmmmmmmmmmmPPmmWWUYUYUYUYUYUYUYUYUY",
-    "mmmmmmmmmmmmmmmmPPmmWWUYUYUYUYUYUYUYUYUY",
-    "nnnnnnnnnnnnnnnnPPnnWWUYUYUYUYUYUYUYUYUY",
-    "aaaaaaaaaaaaaaaaPPaaWWUYUYUYUYUYUYUYUYUY",
-    "aaaaaaaaaaaaaaaaPPaaWWUYUYUYUYUYUYUYUYUY",
-    "ababababababababPPabUYUYUYUYUYUYUYUYUYUY",
-    "bbbbbbbbbbbbbbbbPPbbUUUUUUUUUUUUUUUUUUUU",
-    "bbbbbbbbbbbbbbbbPPbbGGGGGGGGGGGGGGGGGGGG",
-    "bbbbbbbbbbbbbbbbPPbbGGGGGGGGGGGGGGGGGGGG",
-    "bbbbbbbbbbbbbbbbPPbbgggggggggggggggggggg",
-    "bbbbbbbbbbbbbbbbPPbbgggggggggggggggggggg",
+    "AAAAAAAAAAAAAAAAAAAAAAAA" + "NNNNNNNNNNNNNNNNNNNNNNNN",
+    "AAAAAAAAAAAAAAAAAAAAAAAA" + "NNNNNNNNNNNNNNNNNNNNNNNN",
+    "AAAAAAAAAAAAAAAAAAAAAAAA" + "NNNNNNNNNNNNNNNNNNNNNNNN",
+    "SSSAAAAAAAAAAAAAAAAAAAAA" + "NNNNNNNNNNNNNNNNNNNNNNNN",
+    "SSSAAAAAAAAAAAAAAAAAAAAA" + "NNNNNNNNNNNNNNNNNNNNNNNN",
+    "SSSAAAAAAAAAAAAAAAAAAAAA" + "NNNNNNNNNNNNNNNNNNNNNNNN",
+    "BBBBBBBBBBBBBBBBBBBBlLLl" + "NNNNNNNNNNNNNNNNNNNNNNNN",
+    "BBBBBBBBBBBBBBBBBBBBllLl" + "NRNRNRNRNRNRNRNRNRNRNRNR",
+    "CCCCCCCCCCCCCCCCCCCCPPCC" + "URURURURURURURURURURURUR",
+    "CCCCCCCCCCCCCCCCCCCCPPCC" + "UUUUUUUUUUUUUUUUUUUUUUUU",
+    "MMMMSSSSSSSSSSSSSSSSPPMM" + "WWUYUYUYUYUYUYUYUYUYUYUY",
+    "MMMMSSSSSSSSSSSSSSSSPPMM" + "WWUYUYUYUYUYUYUYUYUYUYUY",
+    "MWMWMWMWMWMWMWMWMWMWPPMM" + "WWUYUYUYUYUYUYUYUYUYUYUY",
+    "mmmmmmmmmmmmmmmmmmmmPPmm" + "WWUYUYUYUYUYUYUYUYUYUYUY",
+    "mmmmmmmmmmmmmmmmmmmmPPmm" + "WWUYUYUYUYUYUYUYUYUYUYUY",
+    "nnnnnnnnnnnnnnnnnnnnPPnn" + "WWUYUYUYUYUYUYUYUYUYUYUY",
+    "aaaaaaaaaaaaaaaaaaaaPPaa" + "WWUYUYUYUYUYUYUYUYUYUYUY",
+    "aaaaaaaaaaaaaaaaaaaaPPaa" + "WWUYUYUYUYUYUYUYUYUYUYUY",
+    "ababababababababababPPab" + "WWUYUYUYUYUYUYUYUYUYUYUY",
+    "bbbbbbbbbbbbbbbbbbbbPPbb" + "WWUUUUUUUUUUUUUUUUUUUUUU",
+    "bbbbbbbbbbbbbbbbbbbbPPbb" + "GGGGGGGGGGGGGGGGGGGGGGGG",
+    "bbbbbbbbbbbbbbbbbbbbPPbb" + "GGGGGGGGGGGGGGGGGGGGGGGG",
+    "bbbbbbbbbbbbbbbbbbbbbbbb" + "gggggggggggggggggggggggg",
+    "bbbbbbbbbbbbbbbbbbbbbbbb" + "gggggggggggggggggggggggg",
+    "bbbbbbbbbbbbbbbbbbbbbbbb" + "gggggggggggggggggggggggg",
+    "bbbbbbbbbbbbbbbbbbbbbbbb" + "gggggggggggggggggggggggg",
+    "bbbbbbbbbbbbbbbbbbbbbbbb" + "gggggggggggggggggggggggg",
+    "bbbbbbbbbbbbbbbbbbbbbbbb" + "gggggggggggggggggggggggg",
+    "bbbbbbbbbbbbbbbbbbbbbbbb" + "gggggggggggggggggggggggg",
+    "bbbbbbbbbbbbbbbbbbbbbbbb" + "gggggggggggggggggggggggg",
   ],
   palette: {
     A: "#FFD98E", // céu quente alto
