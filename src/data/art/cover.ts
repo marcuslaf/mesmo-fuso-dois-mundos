@@ -3,17 +3,17 @@ import type { PixelArt } from "@/components/game/PixelSprite";
 /**
  * Capa 48×30: metade esquerda = Fortaleza (quente), metade direita =
  * Buenos Aires (fria). A divisória vertical "derrete" no meio.
- * Cada linha deve ter exatamente 48 caracteres.
+ * Cada linha deve ter exatamente 48 caracteres (24 + 24).
  */
 export const COVER: PixelArt = {
   art: [
-    "AAAAAAAAAAAAAAAAAAAAAAAA" + "NNNNNNNNNNNNNNNNNNNNNNNN",
-    "AAAAAAAAAAAAAAAAAAAAAAAA" + "NNNNNNNNNNNNNNNNNNNNNNNN",
+    "AAAAAAcAAAAAAAAAAAAAAAAA" + "NNNNNNNNNNNNNNNNNNNNNNNN",
+    "AAAAAAcAAAAAAAAAAAAAAAAA" + "NNNNNNNNNNNNNNNNNNNNNNNN",
     "AAAAAAAAAAAAAAAAAAAAAAAA" + "NNNNNNNNNNNNNNNNNNNNNNNN",
     "SSSAAAAAAAAAAAAAAAAAAAAA" + "NNNNNNNNNNNNNNNNNNNNNNNN",
-    "SSSAAAAAAAAAAAAAAAAAAAAA" + "NNNNNNNNNNNNNNNNNNNNNNNN",
-    "SSSAAAAAAAAAAAAAAAAAAAAA" + "NNNNNNNNNNNNNNNNNNNNNNNN",
-    "BBBBBBBBBBBBBBBBBBBBlLLl" + "NNNNNNNNNNNNNNNNNNNNNNNN",
+    "SSSAAAAkAkkAAAAAAAAAAAAA" + "NNNNNNNNNNNNNNNNNNNNNNNN",
+    "SSSAAAAAAkAAAAAAAAAAAAAA" + "NNNNNNNNNNNNNNNNNNNNNNNN",
+    "BBBBBBBBBBBBBBBBBBBBllLL" + "NNNNNNNNNNNNNNNNNNNNNNNN",
     "BBBBBBBBBBBBBBBBBBBBllLl" + "NRNRNRNRNRNRNRNRNRNRNRNR",
     "CCCCCCCCCCCCCCCCCCCCPPCC" + "URURURURURURURURURURURUR",
     "CCCCCCCCCCCCCCCCCCCCPPCC" + "UUUUUUUUUUUUUUUUUUUUUUUU",
@@ -23,12 +23,12 @@ export const COVER: PixelArt = {
     "mmmmmmmmmmmmmmmmmmmmPPmm" + "WWUYUYUYUYUYUYUYUYUYUYUY",
     "mmmmmmmmmmmmmmmmmmmmPPmm" + "WWUYUYUYUYUYUYUYUYUYUYUY",
     "nnnnnnnnnnnnnnnnnnnnPPnn" + "WWUYUYUYUYUYUYUYUYUYUYUY",
-    "aaaaaaaaaaaaaaaaaaaaPPaa" + "WWUYUYUYUYUYUYUYUYUYUYUY",
-    "aaaaaaaaaaaaaaaaaaaaPPaa" + "WWUYUYUYUYUYUYUYUYUYUYUY",
+    "SSSaaaaaaaaaaaaaaaaaPPaa" + "WWUYUYUYUYUYUYUYUYUYUYUY",
+    "SSSaaaaaaaaaaaaaaaaaPPaa" + "WWUYUYUYUYUYUYUYUYUYUYUY",
     "ababababababababababPPab" + "WWUYUYUYUYUYUYUYUYUYUYUY",
     "bbbbbbbbbbbbbbbbbbbbPPbb" + "WWUUUUUUUUUUUUUUUUUUUUUU",
-    "bbbbbbbbbbbbbbbbbbbbPPbb" + "GGGGGGGGGGGGGGGGGGGGGGGG",
-    "bbbbbbbbbbbbbbbbbbbbPPbb" + "GGGGGGGGGGGGGGGGGGGGGGGG",
+    "bbbbbbbbbbbbbbbbbbbbbbbb" + "GGGGGGGGGGGGGGGGGGGGGGGG",
+    "bbbbbbbbbbbbbbbbbbbbbbbb" + "GGGGGGGGGGGGGGGGGGGGGGGG",
     "bbbbbbbbbbbbbbbbbbbbbbbb" + "gggggggggggggggggggggggg",
     "bbbbbbbbbbbbbbbbbbbbbbbb" + "gggggggggggggggggggggggg",
     "bbbbbbbbbbbbbbbbbbbbbbbb" + "gggggggggggggggggggggggg",
@@ -39,21 +39,23 @@ export const COVER: PixelArt = {
     "bbbbbbbbbbbbbbbbbbbbbbbb" + "gggggggggggggggggggggggg",
   ],
   palette: {
-    A: "#FFD98E", // céu quente alto
-    B: "#F7A65A", // céu quente médio
-    C: "#EF8A3C", // céu quente baixo
-    S: "#FFF3C4", // sol
-    M: "#7FD1D9", // mar claro
-    m: "#2E8CA1", // mar médio
-    n: "#1E6A80", // mar fundo
-    W: "#EFFBFF", // espuma/divisória derretida
-    a: "#E0A05C", // areia clara
-    b: "#C77E3E", // areia sombra
-    P: "#6B4226", // tronco da palmeira
-    L: "#4E8C3A", // folha clara
-    l: "#2F5D24", // folha escura
+    A: "#FFE29A", // céu quente alto
+    B: "#FFA94D", // céu quente médio
+    C: "#F78A3C", // céu quente baixo
+    S: "#FFF6D6", // sol e reflexo
+    c: "#FFF0C0", // nuvens
+    k: "#5A3A1E", // pássaros
+    M: "#8FE0E8", // mar claro
+    m: "#3AA0B8", // mar médio
+    n: "#227890", // mar fundo
+    W: "#F2FCFF", // espuma/divisória derretida
+    a: "#F0B070", // areia clara
+    b: "#D08A48", // areia sombra
+    P: "#7A4E2A", // tronco da palmeira
+    L: "#5AA844", // folha clara
+    l: "#336B28", // folha escura
     N: "#1E293B", // céu frio
-    U: "#334155", // prédios
+    U: "#3B4A63", // prédios
     Y: "#FDE68A", // janelas acesas
     R: "#F87171", // chuva
     G: "#111827", // rua

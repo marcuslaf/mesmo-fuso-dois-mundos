@@ -1,88 +1,104 @@
 import type { PixelArt } from "@/components/game/PixelSprite";
 
 /**
- * Retratos 24×24 dos personagens, estilo visual novel retrô.
- * Cada linha deve ter exatamente 24 caracteres; ' ' e '.' são transparentes.
+ * Retratos 32×32 dos personagens, estilo visual novel retrô.
+ * Cada linha deve ter exatamente 32 caracteres; ' ' e '.' são transparentes.
  * Luz vinda da esquerda: sombras caem no lado direito.
  */
 
 export const MARCUS: PixelArt = {
   art: [
-    "......HHHHHHHHHHHH......",
-    ".....HHHHHHHHHHHHHH.....",
-    "....HHHHHHHHHHHHHHHH....",
-    "....HHHHHHHHHHHHHHHH....",
-    "....HHHWWWHHHHWWWHHH....",
-    "....HHWWWWWHHHWWWWWHH...",
-    "....HHHHHHHHHHHHHHHH....",
-    "....HHSSSSSSSSSSSSHH....",
-    "....HSSSSSSSSSSSSSsH....",
-    "....HSSSSSSSSSSSSSsH....",
-    "....HSSgGGEEGGGGgSSH....",
-    "....HSSgGGEEGGGGgSSH....",
-    "....HSSgGGGGGGGGgSSH....",
-    "....HSSSSSSSSSSSSSsH....",
-    "....HSSSSSSSSSSSSSsH....",
-    "....HSSSSSSRRSSSSSSH....",
-    "....HSSbbbbbbbbbbSSH....",
-    "....HHSSbbbbbbbbSSHH....",
-    ".....HHSSSSSSSSSSHH.....",
-    ".....HHHSSSSSSSSHHH.....",
-    "....ccccccccccccccCC....",
-    "...ccccccccccccccccCC...",
-    "..ccccccccccccccccccCC..",
-    "..ccccccccccccccccccCC..",
+    "........HHHHHHHHHHHHHHHH........",
+    ".......HHHHHHHHHHHHHHHHHH.......",
+    "......HHHHHHHHHHHHHHHHHHHH......",
+    ".....HHHHHHHHHHHHHHHHHHHHHH.....",
+    ".....HHHHHHHHHHHHHHHHHHHHHH.....",
+    ".....HHHWWWHHHHHHHHHHWWWHHH.....",
+    ".....HHWWWWWHHHHHHHHHWWWWWHH....",
+    ".....HHHHHHHHHHHHHHHHHHHHHH.....",
+    ".....HHHHHHHHHHHHHHHHHHHHHH.....",
+    ".....HHSSSSSSSSSSSSSSSSSSHH.....",
+    ".....HSSSSSSSSSSSSSSSSSSSsH.....",
+    ".....HSSSSSSSSSSSSSSSSSSSsH.....",
+    ".....HSSgGGGGEEGGGGGGGGgSSH.....",
+    ".....HSSgGGGGEEGGGGGGGGgSSH.....",
+    ".....HSSgGGGGGGGGGGGGGGgSSH.....",
+    ".....HSSSSSSSSSSSSSSSSSSSsH.....",
+    ".....HSSSSSSSSSSSSSSSSSSSsH.....",
+    ".....HSSSSSSSSSSSSSSSSSSSsH.....",
+    ".....HSSSSSSSSRRRRSSSSSSSSH.....",
+    ".....HSSbbbbbbbbbbbbbbbbSSH.....",
+    ".....HHSSbbbbbbbbbbbbbbSSHH.....",
+    "......HHSSSSSSSSSSSSSSSSSSHH....",
+    ".......HHSSSSSSSSSSSSSSSSHH.....",
+    ".......HHHSSSSSSSSSSSSSSHHH.....",
+    "......ccccccccccccccccccccCC....",
+    ".....ccccccccccccccccccccccCC...",
+    "....ccccccccccccccccccccccccCC..",
+    "...ccccccccccccccccccccccccccCC.",
+    "..ccccccccccccccccccccccccccCCCC",
+    "..ccccccccccccccccccccccccccCCCC",
+    "..ccccccccccccccccccccccccccCCCC",
+    "..ccccccccccccccccccccccccccCCCC",
   ],
   palette: {
-    H: "#1A1D24", // cabelo preto
-    W: "#AEB4BE", // mechas brancas (grisalhas)
-    S: "#E0AC69", // pele
-    s: "#C98F52", // pele sombra
-    g: "#3F4A5A", // moldura dos óculos
-    G: "#A9C1E0", // vidro dos óculos
-    E: "#2B2F36", // olhos
-    R: "#B0555A", // boca
-    b: "#9C948D", // barba rala
-    c: "#C2703D", // camisa terracota
-    C: "#9A4E2A", // camisa sombra
+    H: "#14161C", // cabelo preto
+    W: "#C0C6D0", // mechas brancas (grisalhas)
+    S: "#F0B878", // pele
+    s: "#D89A52", // pele sombra
+    g: "#2E3A4A", // moldura dos óculos
+    G: "#B8D0EC", // vidro dos óculos
+    E: "#20242C", // olhos
+    R: "#C05A5E", // boca
+    b: "#A8A098", // barba rala
+    c: "#E07A3C", // camisa terracota
+    C: "#B05A28", // camisa sombra
   },
 };
 
 export const VALERIA: PixelArt = {
   art: [
-    "....HHHHHHHHHHHHHHHH....",
-    "...HHHHHHHHHHHHHHHHHH...",
-    "..HHHHHHHHHHHHHHHHHHhh..",
-    "..HHHHHHHHHHHHHHHHHHhh..",
-    "..HHHHHHHHHHHHHHHHHHhh..",
-    "..HHHHHHHHHHHHHHHHHHhh..",
-    "..HHHHSSSSSSSSSSSSHHHH..",
-    "..HHHSSSSSSSSSSSSSsHHH..",
-    "..HHHSSSSSSSSSSSSSsHHH..",
-    "..HHHSSEEEEEEEEESSSHHH..",
-    "..HHHSSEEEEEEEEESSSHHH..",
-    "..HHHSSSSSSSSSSSSSSHHH..",
-    "..HHHSSSSSSSSSSSSSSHHH..",
-    "..HHHSSSSSSSSSSSSSsHHH..",
-    "..HHHSSSSSSSSSSSSSsHHH..",
-    "..HHHSSSSSRRRRSSSSSHHH..",
-    "..HHHSSSSSSSSSSSSSSHHH..",
-    "..HHHHSSSSSSSSSSSSHHHH..",
-    "...HHHHSSSSSSSSSSHHHH...",
-    "...HHHHHSSSSSSSSHHHHH...",
-    "..DDLLLLLLLLLLLLLLLLll..",
-    "..DLLLLLLLLLLLLLLLLLLl..",
-    "..LLLLLLLLLLLLLLLLLLll..",
-    "..LLLLLLLLLLLLLLLLLLll..",
+    "......HHHHHHHHHHHHHHHHHHHH......",
+    ".....HHHHHHHHHHHHHHHHHHHHHH.....",
+    "....HHHHHHHHHHHHHHHHHHHHHHhh....",
+    "....HHHHHHHHHHHHHHHHHHHHHHhh....",
+    "....HHHHHHHHHHHHHHHHHHHHHHhh....",
+    "....HHHHHHHHHHHHHHHHHHHHHHhh....",
+    "....HHHHHHHHHHHHHHHHHHHHHHhh....",
+    "....HHHHSSSSSSSSSSSSSSSSHHHH....",
+    "....HHHSSSSSSSSSSSSSSSSsHHHH....",
+    "....HHHSSSSSSSSSSSSSSSSsHHHH....",
+    "....HHHSSEEEEEEEEEEEEESSSHHH....",
+    "....HHHSSEEEEEEEEEEEEESSSHHH....",
+    "....HHHSSSSSSSSSSSSSSSSsHHHH....",
+    "....HHHSSSSSSSSSSSSSSSSsHHHH....",
+    "....DHHSSSSSSSSSSSSSSSSSSHHD....",
+    "....DHHSSSSSSSSSSSSSSSSSSHHD....",
+    "....HHHSSSSSSSSSSSSSSSSSSHHH....",
+    "....HHHSSSSSSSSSSSSSSSSSSHHH....",
+    "....HHHSSSSSSSRRRRRRSSSSSHHH....",
+    "....HHHSSSSSSSSSSSSSSSSSSHHH....",
+    "....HHHHSSSSSSSSSSSSSSSSHHHH....",
+    ".....HHHHSSSSSSSSSSSSSSHHHH.....",
+    ".....HHHHHSSSSSSSSSSSSHHHHH.....",
+    "....DDLLLLLLLLLLLLLLLLLLLLll....",
+    "....DLLLLLLLLLLLLLLLLLLLLLLl....",
+    "....LLLLLLLLLLLLLLLLLLLLLLll....",
+    "....LLLLLLLLLLLLLLLLLLLLLLll....",
+    "....LLLLLLLLLLLLLLLLLLLLLLll....",
+    "....LLLLLLLLLLLLLLLLLLLLLLll....",
+    "....LLLLLLLLLLLLLLLLLLLLLLll....",
+    "....LLLLLLLLLLLLLLLLLLLLLLll....",
+    "....LLLLLLLLLLLLLLLLLLLLLLll....",
   ],
   palette: {
-    H: "#1A1D24", // cabelo preto puro
+    H: "#14161C", // cabelo preto puro
     h: "#2E3440", // cabelo sombra (preto azulado)
-    S: "#E8B98A", // pele
-    s: "#C9945F", // pele sombra
-    E: "#1A1D24", // olhos
-    D: "#F5C542", // brinco dourado
-    R: "#B0555A", // lábios
+    S: "#F2C08C", // pele
+    s: "#D09A5E", // pele sombra
+    E: "#14161C", // olhos
+    D: "#FFD54A", // brinco dourado
+    R: "#C05A5E", // lábios
     L: "#3B82F6", // blusa azul
     l: "#1D4ED8", // blusa sombra
   },
@@ -90,76 +106,92 @@ export const VALERIA: PixelArt = {
 
 export const FRAN: PixelArt = {
   art: [
-    "....HHHHHHHHHHHHHHHH....",
-    "...HHHHHHHHHHHHHHHHHH...",
-    "..HHHHHHHHHHHHHHHHHHhh..",
-    "..HHHHHHHHHHHHHHHHHHhh..",
-    "..HHHHHHHHHHHHHHHHHHhh..",
-    "..HHHHHHHHHHHHHHHHHHhh..",
-    "..HHHHHHHHHHHHHHHHHHHH..",
-    "..HHHHHSSSSSSSSSSHHHHH..",
-    "..HHHHSSSSSSSSSSSsHHHH..",
-    "..HHHHSSSSSSSSSSSsHHHH..",
-    "..HHHHSSEEEEEEEESSSHHH..",
-    "..HHHHSSEEEEEEEESSSHHH..",
-    "..HHHHSSSSSSSSSSSSHHHH..",
-    "..HHHHSSSSSSSSSSSsHHHH..",
-    "..HHHHSSSSSSSSSSSsHHHH..",
-    "..HHHHSSSSSRRRRSSSHHHH..",
-    "..HHHHSSSSSSSSSSSSHHHH..",
-    "..HHHHHSSSSSSSSSSHHHHH..",
-    "...HHHHHSSSSSSSSHHHHH...",
-    "...HHHHHHSSSSSSHHHHHH...",
-    "..UUUUUUUUUUUUUUUUUUuu..",
-    "..UUUUUUUUUUUUUUUUUUuu..",
-    "..UUUUUUUUUUUUUUUUUUuu..",
-    "..UUUUUUUUUUUUUUUUUUuu..",
+    "......HHHHHHHHHHHHHHHHHHHH......",
+    ".....HHHHHHHHHHHHHHHHHHHHHH.....",
+    "....HHHHHHHHHHHHHHHHHHHHHHhh....",
+    "....HHHHHHHHHHHHHHHHHHHHHHhh....",
+    "....HHHHHHHHHHHHHHHHHHHHHHhh....",
+    "....HHHHHHHHHHHHHHHHHHHHHHhh....",
+    "....HHHHHHHHHHHHHHHHHHHHHHhh....",
+    "....HHHHHHHHHHHHHHHHHHHHHHhh....",
+    "....HHHHHSSSSSSSSSSSSSSSHHHH....",
+    "....HHHHSSSSSSSSSSSSSSsSHHHH....",
+    "....HHHHSSSSSSSSSSSSSSsSHHHH....",
+    "....HHHHSSEEEEEEEEEEEESSSHHH....",
+    "....HHHHSSEEEEEEEEEEEESSSHHH....",
+    "....HHHHSSSSSSSSSSSSSSsSHHHH....",
+    "....HHHHSSSSSSSSSSSSSSsSHHHH....",
+    "....HHHHSSSSSSSSSSSSSSsSHHHH....",
+    "....HHHHSSSSSSSSSSSSSSsSHHHH....",
+    "....HHHHSSSSSSSRRRRSSSSSHHHH....",
+    "....HHHHSSSSSSSSSSSSSSSSHHHH....",
+    "....HHHHHSSSSSSSSSSSSSSSHHHH....",
+    ".....HHHHHSSSSSSSSSSSSSHHHH.....",
+    ".....HHHHHHSSSSSSSSSSSHHHHH.....",
+    "....UUUUUUUUUUUUUUUUUUUUUUuu....",
+    "....UUUUUUUUUUUUUUUUUUUUUUuu....",
+    "....UUUUUUUUUUUUUUUUUUUUUUuu....",
+    "....UUUUUUUUUUUUUUUUUUUUUUuu....",
+    "....UUUUUUUUUUUUUUUUUUUUUUuu....",
+    "....UUUUUUUUUUUUUUUUUUUUUUuu....",
+    "....UUUUUUUUUUUUUUUUUUUUUUuu....",
+    "....UUUUUUUUUUUUUUUUUUUUUUuu....",
+    "....UUUUUUUUUUUUUUUUUUUUUUuu....",
+    "....UUUUUUUUUUUUUUUUUUUUUUuu....",
   ],
   palette: {
     H: "#4A3B32", // cabelo castanho
     h: "#6B5546", // mechas
-    S: "#E8B98A", // pele
-    s: "#C9945F", // pele sombra
+    S: "#F2C08C", // pele
+    s: "#D09A5E", // pele sombra
     E: "#3D2B20", // olhos
-    R: "#B0555A", // boca
-    U: "#D97706", // hoodie
-    u: "#92400E", // hoodie sombra
+    R: "#C05A5E", // boca
+    U: "#F59E0B", // hoodie
+    u: "#B45309", // hoodie sombra
   },
 };
 
 export const GALEGO: PixelArt = {
   art: [
-    "..oOOo..........oOOo....",
-    "..oOOOo........oOOOo....",
-    "...oOOOOooooooOOOOo.....",
-    "...oOOOOOOOOOOOOOOo.....",
-    "..oOOOOOOOOOOOOOOOOo....",
-    "..oODOOOOOOOOOOOOODo....",
-    "..oODEEEEEEEEEEEEEDo....",
-    "..oODEEEEEEEEEEEEEDo....",
-    "..oOOOOOOOOOOOOOOOOo....",
-    "..oOOOODDDDDDDDOOOOo....",
-    "..oOOOODDDDDDDDOOOOo....",
-    "...oOOOOWWWWWWOOOo......",
-    "...oOOOOWNNNNWOOOo......",
-    "...oOOOOWWWWWWOOOo......",
-    "....oOOOOOOOOOOOOo......",
-    "....oOOOOOOOOOOOOo......",
-    "....oOOOOOOOOOOOOo......",
-    ".....oOOOOOOOOOOo.......",
-    ".....oOOOOOOOOOOo.......",
-    "......oooooooooo........",
-    "........................",
-    "........................",
-    "........................",
-    "........................",
+    "....oOOOo..........oOOOo......",
+    "....oOOOOo........oOOOOo......",
+    ".....oOOOOooooooOOOOo.........",
+    ".....oOOOOOOOOOOOOOOOo........",
+    "....oOOOOOOOOOOOOOOOOOo.......",
+    "....oODOOOOOOOOOOOOOOODo......",
+    "....oODEEEEEEEEEEEEEEEDo......",
+    "....oODEEEEEEEEEEEEEEEDo......",
+    "....oOOOOOOOOOOOOOOOOOo.......",
+    "....oOOOODDDDDDDDDDOOOOo......",
+    "....oOOOODDDDDDDDDDOOOOo......",
+    ".....oOOOOWWWWWWWWOOOo........",
+    ".....oOOOOWNNNNNNWOOOo........",
+    ".....oOOOOWWWWWWWWOOOo........",
+    "......oOOOOOOOOOOOOOOo........",
+    "......oOOOOOOOOOOOOOOo........",
+    "......oOOOOOOOOOOOOOOo........",
+    ".......oOOOOOOOOOOOOo.........",
+    ".......oOOOOOOOOOOOOo.........",
+    "........oooooooooooo..........",
+    "..............................",
+    "..............................",
+    "..............................",
+    "..............................",
+    "..............................",
+    "..............................",
+    "..............................",
+    "..............................",
+    "..............................",
+    "..............................",
+    "..............................",
+    "..............................",
   ],
   palette: {
-    O: "#E8A33D", // laranja
-    o: "#C77E22", // laranja sombra
-    D: "#7A4E14", // listras tabby
+    O: "#F5A623", // laranja
+    o: "#D97E1E", // laranja sombra
+    D: "#8A5A1A", // listras tabby
     E: "#7DB84D", // olhos verdes
-    W: "#F5EFE6", // focinho/bigodes
-    N: "#E88A8A", // nariz rosado
+    W: "#FDF6EC", // focinho/bigodes
+    N: "#F08A8A", // nariz rosado
   },
 };

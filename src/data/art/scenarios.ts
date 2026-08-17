@@ -5,16 +5,16 @@ import type { PixelArt } from "@/components/game/PixelSprite";
  * Cada linha deve ter exatamente 48 caracteres; ' ' e '.' são transparentes.
  */
 
-/** Praia de Fortaleza ao entardecer: sol, mar, palmeira e areia. */
+/** Praia de Fortaleza ao entardecer: sol, nuvens, pássaros, mar, palmeira e areia. */
 export const FORTALEZA: PixelArt = {
   art: [
     "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "AAAAAAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "AAAAAAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
     "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
     "SSSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    "SSSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    "SSSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "SSSAAAAkAkkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "SSSAAAAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
     "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
     "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
     "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
@@ -23,10 +23,10 @@ export const FORTALEZA: PixelArt = {
     "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
     "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEllLLLllEEEEEEEEEEE",
     "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEllLLLLlllEEEEEEEEE",
-    "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMPPMMMMMMMMMMMMMMMM",
-    "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMPPMMMMMMMMMMMMMMMM",
-    "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMPPMMMMMMMMMMMMMMMM",
-    "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMPPMMMMMMMMMMMMMMMM",
+    "SSSMMMMMMMMMMMMMMMMMMMMMMMMMMMPPMMMMMMMMMMMMMMMM",
+    "SSSMMMMMMMMMMMMMMMMMMMMMMMMMMMPPMMMMMMMMMMMMMMMM",
+    "SSSMMMMMMMMMMMMMMMMMMMMMMMMMMMPPMMMMMMMMMMMMMMMM",
+    "SSSMMMMMMMMMMMMMMMMMMMMMMMMMMMPPMMMMMMMMMMMMMMMM",
     "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWPPWWWWWWWWWWWWWWWW",
     "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmPPmmmmmmmmmmmmmm",
     "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmPPmmmmmmmmmmmmmm",
@@ -40,25 +40,27 @@ export const FORTALEZA: PixelArt = {
     "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
   ],
   palette: {
-    A: "#FFD98E", // céu alto
-    B: "#F7C35A", // céu médio-alto
-    C: "#F7A65A", // céu médio
-    D: "#EF8A3C", // céu médio-baixo
-    E: "#E06A2E", // céu baixo (horizonte)
-    S: "#FFF3C4", // sol
-    M: "#7FD1D9", // mar claro
-    m: "#2E8CA1", // mar médio
-    n: "#1E6A80", // mar fundo
-    W: "#EFFBFF", // espuma/ondas
-    a: "#E0A05C", // areia clara
-    b: "#C77E3E", // areia sombra
-    P: "#6B4226", // tronco da palmeira
-    L: "#4E8C3A", // folha clara
-    l: "#2F5D24", // folha escura
+    A: "#FFE29A", // céu alto
+    B: "#FFC45E", // céu médio-alto
+    C: "#FFA94D", // céu médio
+    D: "#F78A3C", // céu médio-baixo
+    E: "#E86A2E", // céu baixo (horizonte)
+    S: "#FFF6D6", // sol e reflexo
+    c: "#FFF0C0", // nuvens
+    k: "#5A3A1E", // pássaros
+    M: "#8FE0E8", // mar claro
+    m: "#3AA0B8", // mar médio
+    n: "#227890", // mar fundo
+    W: "#F2FCFF", // espuma/ondas
+    a: "#F0B070", // areia clara
+    b: "#D08A48", // areia sombra
+    P: "#7A4E2A", // tronco da palmeira
+    L: "#5AA844", // folha clara
+    l: "#336B28", // folha escura
   },
 };
 
-/** Buenos Aires à noite: prédios, janelas acesas, chuva e rua molhada. */
+/** Buenos Aires à noite: prédios, janelas acesas, chuva, névoa e rua molhada. */
 export const BUENOS_AIRES: PixelArt = {
   art: [
     "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -94,9 +96,9 @@ export const BUENOS_AIRES: PixelArt = {
   ],
   palette: {
     A: "#1E293B", // céu noite
-    M: "#94A3B8", // lua
-    m: "#CBD5E1", // lua brilho
-    P: "#334155", // prédios
+    M: "#A5B4FC", // lua
+    m: "#E0E7FF", // lua brilho
+    P: "#3B4A63", // prédios
     W: "#FDE68A", // janelas acesas
     R: "#F87171", // chuva/reflexo
     G: "#111827", // rua
@@ -104,13 +106,13 @@ export const BUENOS_AIRES: PixelArt = {
   },
 };
 
-/** Mapa do reino (KC): fundo púrpura, castelo dourado, rio, caminho e floresta. */
+/** Mapa do reino (KC): fundo púrpura, castelo dourado com torres, rio, caminho e floresta. */
 export const KC_MAP: PixelArt = {
   art: [
     "PPWPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
     "PpPpPpPpPpPpPpPpPpPpPpPpPpPpPpPpPpPpPpPpPpPpPpPp",
-    "PPPPPPPPPPPPPPPPPPPPGGPPPPPPPPPPPPPPPPPPPPPPPPPP",
-    "PPPPPPPPPPPPPPPPPPPPGGPPPPPPPPPPPPPPPPPPPPPPPPPP",
+    "PPPPPPPPPPPPPPPPPPPPWGGWPPPPPPPPPPPPPPPPPPPPPPPP",
+    "PPPPPPPPPPPPPPPPPPPPGGGGPPPPPPPPPPPPPPPPPPPPPPPP",
     "PPPPPPPPPPPPPPPPPPPPGGGGGGGGPPPPPPPPPPPPPPPPPPPP",
     "PPPPPPPPPPPPPPPPPPPPGgGGGGgGPPPPPPPPPPPPPPPPPPPP",
     "PPPPPPPPPPPPPPPPPPPPGGGGGGGGPPPPPPPPPPPPPPPPPPPP",
@@ -139,9 +141,9 @@ export const KC_MAP: PixelArt = {
     "FfFfFfFfFfFfFfFfFfFfFfFfFfFfFfFfFfFfFfFfFfFfFfFf",
   ],
   palette: {
-    P: "#2E1065", // fundo púrpura
-    p: "#4C1D95", // púrpura médio
-    W: "#FDE68A", // estrelas
+    P: "#3B0A78", // fundo púrpura
+    p: "#5B21B6", // púrpura médio
+    W: "#FDE68A", // estrelas e bandeiras
     G: "#FBBF24", // castelo dourado
     g: "#B45309", // castelo sombra
     R: "#38BDF8", // rio
